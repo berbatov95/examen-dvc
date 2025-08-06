@@ -8,7 +8,7 @@
 # -----------------------------------
 # Ignorar archivos de datos y modelos
 # -----------------------------------
-*.dvc
+#*.dvc
 .dvc/cache/
 
 # Datos crudos y procesados binarios
