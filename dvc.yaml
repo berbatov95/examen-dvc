@@ -9,3 +9,13 @@ stages:
     - data/processed/X_train.pkl
     - data/processed/y_test.pkl
     - data/processed/y_train.pkl
+  normalize_data:
+    cmd: python src/data/normalize_data.py
+    deps:
+    - data/processed/X_test.pkl
+    - data/processed/X_train.pkl
+    - src/data/normalize_data.py
+    outs:
+    - data/processed/X_test_scaled.pkl
+    - data/processed/X_train_scaled.pkl
+    - models/data/scaler.pkl
