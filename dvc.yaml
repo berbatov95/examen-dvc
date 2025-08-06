@@ -44,7 +44,5 @@ stages:
     - data/processed/y_test.pkl
     - models/models/final_model.pkl
     - src/models/evaluate_model.py
-    outs:
-    - data/processed/predictions.csv
     metrics:
     - metrics/scores.json
