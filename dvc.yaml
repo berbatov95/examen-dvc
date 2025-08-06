@@ -19,3 +19,12 @@ stages:
     - data/processed/X_test_scaled.pkl
     - data/processed/X_train_scaled.pkl
     - models/data/scaler.pkl
+  grid_search:
+    cmd: python src/models/grid_search.py
+    deps:
+    - data/processed/X_train_scaled.pkl
+    - data/processed/y_train.pkl
+    - src/models/grid_search.py
+    outs:
+    - models/grid/best_params.pkl
+    - models/grid/grid_results.json
