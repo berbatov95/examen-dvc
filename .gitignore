@@ -1,2 +1,27 @@
 /venv
 /clean_data.csv
+# Ignorar entorno virtual
+/.venv
+
+/clean_data.csv
+
+# -----------------------------------
+# Ignorar archivos de datos y modelos
+# -----------------------------------
+*.dvc
+.dvc/cache/
+
+# Datos crudos y procesados binarios
+data/raw/*.csv
+data/processed/*.pkl
+
+# Modelos serializados
+models/data/*.pkl
+models/models/*.pkl
+
+# Carpeta de resultados de GridSearch (opcional)
+models/grid/*.json
+
+# Métricas y plots
+metrics/*.json
+metrics/*.png
