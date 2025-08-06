@@ -37,3 +37,14 @@ stages:
     - src/models/train_model.py
     outs:
     - models/models/final_model.pkl
+  evaluate_model:
+    cmd: python src/models/evaluate_model.py
+    deps:
+    - data/processed/X_test_scaled.pkl
+    - data/processed/y_test.pkl
+    - models/models/final_model.pkl
+    - src/models/evaluate_model.py
+    outs:
+    - data/processed/predictions.csv
+    metrics:
+    - metrics/scores.json
